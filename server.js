@@ -9,10 +9,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/views/index.html');
+  res.sendFile(__dirname + 'index.html');
 })
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname ));
 
 app.get('/hello', function (req, res) {
   const name = req.query.name || 'Guest';
